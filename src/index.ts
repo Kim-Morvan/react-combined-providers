@@ -1,1 +1,1 @@
-export { default as CombinedProviders } from './combined-providers';
+export { CombinedProviders } from './combined-providers';

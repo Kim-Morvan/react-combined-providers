@@ -18,10 +18,9 @@ const combinedProviders = (...providers: CombinedProviderType[]): FC<{ children:
   };
 };
 
-const CombinedProviders: FC<CombinedProvidersProps> = ({ providers = [], children }) => {
+// Changed to named export
+export const CombinedProviders: FC<CombinedProvidersProps> = ({ providers = [], children }) => {
   const CombinedProvider = combinedProviders(...providers);
   return <CombinedProvider>{children}</CombinedProvider>;
 };
-
-export default CombinedProviders;
 export type { CombinedProvidersProps };
