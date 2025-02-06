@@ -20,8 +20,8 @@
     "context",
     "combine"
   ],
-  "author": {
-    "name": "Kim-Morvan",
+  "author": "Kim-Morvan",
+  "repository": {
     "url": "https://github.com/Kim-Morvan/react-combined-providers"
   },
   "license": "MIT",
