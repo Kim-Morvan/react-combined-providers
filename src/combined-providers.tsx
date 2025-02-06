@@ -1,13 +1,8 @@
-import { ReactNode, ComponentType, FC } from "react";
+import * as React from 'react';
 
-type CombinedProviderType = ComponentType<{ children: ReactNode }>;
+type CombinedProviderType = React.ComponentType<{ children: React.ReactNode }>;
 
-interface CombinedProvidersProps {
-  providers?: CombinedProviderType[];
-  children: ReactNode;
-}
-
-const combinedProviders = (...providers: CombinedProviderType[]): FC<{ children: ReactNode }> => {
+const combinedProviders = (...providers: CombinedProviderType[]): React.FC<{ children: React.ReactNode }> => {
   return ({ children }) => {
     return providers.reduceRight(
       (AccumulatedChildren, CurrentProvider) => (
@@ -18,9 +13,13 @@ const combinedProviders = (...providers: CombinedProviderType[]): FC<{ children:
   };
 };
 
-// Changed to named export
-export const CombinedProviders: FC<CombinedProvidersProps> = ({ providers = [], children }) => {
+export const CombinedProviders = ({ 
+  providers = [], 
+  children 
+}: { 
+  providers?: CombinedProviderType[]; 
+  children: React.ReactNode;
+}) => {
   const CombinedProvider = combinedProviders(...providers);
   return <CombinedProvider>{children}</CombinedProvider>;
 };
-export type { CombinedProvidersProps };
