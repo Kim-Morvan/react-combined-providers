@@ -29,6 +29,7 @@ const App = () => (
 );
 
 export default App;
+```
 
 Why use react-combined-provider?
 
