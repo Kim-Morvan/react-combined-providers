@@ -23,7 +23,10 @@ export default [
       resolve(), 
       commonjs(), 
       typescript({
-        tsconfig: "./tsconfig.json"
+        tsconfig: "./tsconfig.json",
+        jsx: "react",
+        jsxFactory: "React.createElement",
+        jsxFragmentFactory: "React.Fragment"
       }), 
       json()
     ],

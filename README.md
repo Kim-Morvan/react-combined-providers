@@ -1,4 +1,4 @@
-react-combined-provider
+react-combined-providers
 
 A utility for combining multiple React Context Providers into a single component. This helps to keep your provider hierarchy clean and manageable.
 
@@ -7,9 +7,9 @@ Installation
 You can install the package using npm or yarn:
 
 ```bash
-npm install react-combined-provider
+npm install react-combined-providers
 # or
-yarn add react-combined-provider
+yarn add react-combined-providers
 ```
 
 Usage
