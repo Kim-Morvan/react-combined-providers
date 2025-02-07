@@ -17,7 +17,7 @@ Usage
 Wrap your application with CombinedProviders, passing an array of your context providers:
 
 ```tsx
-import CombinedProviders from "react-combined-provider";
+import { CombinedProviders } from "react-combined-providers";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AuthProvider } from "./contexts/AuthContext";
 import { StoreProvider } from "./contexts/StoreContext";
